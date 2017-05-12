@@ -16,6 +16,20 @@ class WBMainViewController: UITabBarController {
         setupChildViewControllers()
         setupCompossBtn()
     }
+    
+    /**
+     portrait : 竖屏，肖像
+     landscape: 竖屏，风景画
+      - 使用代码控制方向，好处：可以在横屏的时候单独处理
+      - 设置支持的方向之后，当前的控制器及子控制器都会遵守这个方向
+      - 如果播放视频 通常是通过 modal 展现的！
+     
+     */
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        
+        return .portrait
+    }
+    
     lazy var composeBtton: UIButton = UIButton.cz_imageButton("tabbar_compose_icon_add",
                                                                        backgroundImageName: "tabbar_compose_button")
     // Mark: 撰写按钮的监听方法
