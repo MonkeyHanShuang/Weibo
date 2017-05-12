@@ -28,11 +28,15 @@ class WBNavgationController: UINavigationController {
             // 判断控制器的类型
             if let vc = viewController as? WBBaseViewController {
                 var title = "返回"
+                var isBack = true
+                
                 if childViewControllers.count == 1 {
                     title = childViewControllers.first?.title ?? "返回"
+                    isBack = false
                 }
                 // 取出自定义的 navItem
-                vc.navItem.leftBarButtonItem = UIBarButtonItem(title: title, target: self, action: #selector(popToParent))
+                vc.navItem.leftBarButtonItem = UIBarButtonItem(title: title, fontSize: 16, target: self, action: #selector(popToParent), isBack: isBack)
+//                (title: title, target: self, action: #selector(popToParent)
             }
         }
         
