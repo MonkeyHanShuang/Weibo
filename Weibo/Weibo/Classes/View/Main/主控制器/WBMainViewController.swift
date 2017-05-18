@@ -56,14 +56,22 @@ extension WBMainViewController {
     /// 设置所有子控制器
     func setupChildViewControllers() {
         
-        let array = [
-            ["clsName": "WBHomeViewController", "title": "首页", "imageName": "home"],
-            ["clsName": "WBMessageViewController", "title": "消息", "imageName": "message_center"],
-            ["clsName": "white"],
-            ["clsName": "WBDiscoverViewController", "title": "发现", "imageName": "discover"],
-            ["clsName": "WBProfileViewController", "title": "我", "imageName": "profile"]
+        // 从 Bundle 加载配置的 json
+        // 1. 路径 2. 加载 Data  3.反序列化转化为数组
+        guard let path = Bundle.main.path(forResource: "main.json", ofType: nil),
+            let data = NSData(contentsOfFile: path),
+        let array = try? JSONSerialization.jsonObject(with: data as Data, options: []) as! [[String: Any]]
+            else {
+                return
+        }
+
+//        // 直接保存到本地沙盒
+//        // (array as NSArray).write(toFile: "/Users/hanshuang/Desktop/demo.plist", atomically: true)
+//        
+//        let data = try! JSONSerialization.data(withJSONObject: array, options: [.prettyPrinted])
+//        (data as NSData).write(toFile: "/Users/hanshuang/Desktop/demo.json", atomically: true)
         
-        ]
+        
         var array_M = [UIViewController]()
         
         for dict in array {
@@ -73,12 +81,13 @@ extension WBMainViewController {
     }
     
     // MARK: 使用字典创建所有的子控制器
-    private func controller(dict: [String: String]) -> UIViewController {
+    private func controller(dict: [String: Any]) -> UIViewController {
         
-        guard let clsName = dict["clsName"],
-            let title = dict["title"],
-            let imageName = dict["imageName"],
-            let cls = NSClassFromString(Bundle.main.namespasce + "." + clsName) as? UIViewController.Type
+        guard let clsName = dict["clsName"] as? String,
+            let title = dict["title"] as? String,
+            let imageName = dict["imageName"] as? String,
+            let cls = NSClassFromString(Bundle.main.namespasce + "." + clsName) as? WBBaseViewController.Type,
+            let visitorInfo = dict["visitorInfo"] as? [String: String]
             else {
             return UIViewController()
         }
@@ -88,6 +97,7 @@ extension WBMainViewController {
         vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.orange], for: .highlighted)
         vc.tabBarItem.image = UIImage(named: "tabbar_" + imageName)
         vc.tabBarItem.selectedImage = UIImage(named: "tabbar_" + imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
+        vc.visitorDict = visitorInfo
         
         // 实例化导航控制器的时候，会调用push 讲rootVC 压栈
         let nav = WBNavgationController(rootViewController: vc)

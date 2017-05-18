@@ -24,10 +24,12 @@
 		0C38D8231EC5A69200A39221 /* WBDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38D8091EC5A69200A39221 /* WBDiscoverViewController.swift */; };
 		0C38D8241EC5A69200A39221 /* WBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38D80B1EC5A69200A39221 /* WBHomeViewController.swift */; };
 		0C38D8251EC5A69200A39221 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38D80D1EC5A69200A39221 /* WBBaseViewController.swift */; };
-		0C38D8261EC5A69200A39221 /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38D80E1EC5A69200A39221 /* WBMainViewController.swift */; };
-		0C38D8271EC5A69200A39221 /* WBNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38D80F1EC5A69200A39221 /* WBNavgationController.swift */; };
 		0C38D8281EC5A69200A39221 /* WBMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38D8111EC5A69200A39221 /* WBMessageViewController.swift */; };
 		0C38D8291EC5A69200A39221 /* WBProfileViewController 下午4.12.48.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38D8131EC5A69200A39221 /* WBProfileViewController 下午4.12.48.swift */; };
+		0C38D82E1EC88D7600A39221 /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38D82C1EC88D7600A39221 /* WBMainViewController.swift */; };
+		0C38D82F1EC88D7600A39221 /* WBNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38D82D1EC88D7600A39221 /* WBNavgationController.swift */; };
+		0C38D8311EC88D9000A39221 /* WBVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38D8301EC88D9000A39221 /* WBVisitor.swift */; };
+		0CAC5B201ECAFCF100D4A48C /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CAC5B1F1ECAFCF100D4A48C /* main.json */; };
 		0CDC1BE31EC2EDC800C56F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC1BE21EC2EDC800C56F45 /* AppDelegate.swift */; };
 		0CDC1BEA1EC2EDC800C56F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CDC1BE91EC2EDC800C56F45 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -63,10 +65,12 @@
 		0C38D8091EC5A69200A39221 /* WBDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDiscoverViewController.swift; sourceTree = "<group>"; };
 		0C38D80B1EC5A69200A39221 /* WBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeViewController.swift; sourceTree = "<group>"; };
 		0C38D80D1EC5A69200A39221 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
-		0C38D80E1EC5A69200A39221 /* WBMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
-		0C38D80F1EC5A69200A39221 /* WBNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavgationController.swift; sourceTree = "<group>"; };
 		0C38D8111EC5A69200A39221 /* WBMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMessageViewController.swift; sourceTree = "<group>"; };
 		0C38D8131EC5A69200A39221 /* WBProfileViewController 下午4.12.48.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WBProfileViewController 下午4.12.48.swift"; sourceTree = "<group>"; };
+		0C38D82C1EC88D7600A39221 /* WBMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
+		0C38D82D1EC88D7600A39221 /* WBNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavgationController.swift; sourceTree = "<group>"; };
+		0C38D8301EC88D9000A39221 /* WBVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitor.swift; sourceTree = "<group>"; };
+		0CAC5B1F1ECAFCF100D4A48C /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
 		0CDC1BDF1EC2EDC800C56F45 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CDC1BE21EC2EDC800C56F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CDC1BE91EC2EDC800C56F45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,9 +188,9 @@
 		0C38D80C1EC5A69200A39221 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0C38D82B1EC88D7600A39221 /* 主控制器 */,
+				0C38D82A1EC88D7600A39221 /* 访客视图 */,
 				0C38D80D1EC5A69200A39221 /* WBBaseViewController.swift */,
-				0C38D80E1EC5A69200A39221 /* WBMainViewController.swift */,
-				0C38D80F1EC5A69200A39221 /* WBNavgationController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -212,6 +216,24 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C38D82A1EC88D7600A39221 /* 访客视图 */ = {
+			isa = PBXGroup;
+			children = (
+				0C38D8301EC88D9000A39221 /* WBVisitor.swift */,
+			);
+			path = "访客视图";
+			sourceTree = "<group>";
+		};
+		0C38D82B1EC88D7600A39221 /* 主控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				0CAC5B1F1ECAFCF100D4A48C /* main.json */,
+				0C38D82C1EC88D7600A39221 /* WBMainViewController.swift */,
+				0C38D82D1EC88D7600A39221 /* WBNavgationController.swift */,
+			);
+			path = "主控制器";
 			sourceTree = "<group>";
 		};
 		0CDC1BD61EC2EDC700C56F45 = {
@@ -303,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CAC5B201ECAFCF100D4A48C /* main.json in Resources */,
 				0CDC1BEA1EC2EDC800C56F45 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,13 +345,14 @@
 				0C38D81E1EC5A69200A39221 /* UIScreen+CZAddition.m in Sources */,
 				0C38D8241EC5A69200A39221 /* WBHomeViewController.swift in Sources */,
 				0C38D81F1EC5A69200A39221 /* UIView+CZAddition.m in Sources */,
+				0C38D82F1EC88D7600A39221 /* WBNavgationController.swift in Sources */,
+				0C38D82E1EC88D7600A39221 /* WBMainViewController.swift in Sources */,
 				0C38D8281EC5A69200A39221 /* WBMessageViewController.swift in Sources */,
 				0C38D8161EC5A69200A39221 /* NSAttributedString+CZAdditon.m in Sources */,
 				0C38D8171EC5A69200A39221 /* NSObject+CZRuntime.m in Sources */,
 				0C38D8291EC5A69200A39221 /* WBProfileViewController 下午4.12.48.swift in Sources */,
-				0C38D8271EC5A69200A39221 /* WBNavgationController.swift in Sources */,
+				0C38D8311EC88D9000A39221 /* WBVisitor.swift in Sources */,
 				0C38D8251EC5A69200A39221 /* WBBaseViewController.swift in Sources */,
-				0C38D8261EC5A69200A39221 /* WBMainViewController.swift in Sources */,
 				0C38D81A1EC5A69200A39221 /* NSString+CZPath.m in Sources */,
 				0C38D8191EC5A69200A39221 /* NSString+CZHash.m in Sources */,
 				0C38D81B1EC5A69200A39221 /* UIButton+CZAddition.m in Sources */,
